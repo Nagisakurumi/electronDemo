@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello Electron!</title>
+    <style>
+        .el-table .warning-row {
+            background: oldlace;
+        }
+        
+        .el-table .success-row {
+            background: #f0f9eb;
+        }
+    </style>
+    <!-- jquery -->
+    <script src="js/jQuert.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="js/index.js"></script>
+  </head>   
+  <body>
+    <div class="maindiv">
+        <div class="left">
+            <ul>
+                <li>
+                    <div>
+                        <img src="img/market.png">
+                        <p>市场</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="img/market.png">
+                        <p>交易</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="conetnt">
+            <div class="toolbar">
+                <button>自选</button>
+                <button>自选</button>
+                <button>自选</button>
+                <button>自选</button>
+
+                <input placeholder="搜索内容" type="text">
+            </div>
+
+            <div style="color: white;">
+                <template>
+                    <el-table
+                        :data="tableData2"
+                        style="width: 100%"
+                        :row-class-name="tableRowClassName">
+                        <el-table-column
+                        prop="date"
+                        label="日期"
+                        width="180">
+                        </el-table-column>
+                        <el-table-column
+                        prop="name"
+                        label="姓名"
+                        width="180">
+                        </el-table-column>
+                        <el-table-column
+                        prop="address"
+                        label="地址">
+                        </el-table-column>
+                    </el-table>
+                </template>
+                    
+            </div>
+        </div>
+        <div class="right">
+            
+        </div>
+    </div>
+  </body>
+</html>
